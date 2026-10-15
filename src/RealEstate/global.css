@@ -1,0 +1,114 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Real Estate Platform Theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+  */
+  :root {
+    /* Real Estate Premium Colors - New Color Scheme */
+    --primary: 195 70% 20%;              /* Dark Teal #0f4656 */
+    --primary-foreground: 0 0% 100%;     /* White #ffffff */
+
+    --secondary: 19 83% 62%;             /* Orange/Coral #ef864c */
+    --secondary-foreground: 0 0% 100%;   /* White #ffffff */
+
+    --accent: 19 83% 62%;                /* Orange/Coral #ef864c */
+    --accent-foreground: 0 0% 100%;      /* White #ffffff */
+
+    --background: 195 70% 20%;           /* Dark Teal #0f4656 */
+    --foreground: 0 0% 100%;             /* White #ffffff */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;          /* Black #000000 */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;       /* Black #000000 */
+
+    --muted: 0 0% 78%;                   /* Light Gray #c7c7c7 */
+    --muted-foreground: 0 0% 78%;        /* Light Gray #c7c7c7 */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 78%;                  /* Light Gray #c7c7c7 */
+    --input: 0 0% 78%;                   /* Light Gray #c7c7c7 */
+    --ring: 19 83% 62%;                  /* Orange/Coral #ef864c */
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 216 33.3% 97.1%;
+    --sidebar-foreground: 213.8 44.4% 11.2%;
+    --sidebar-primary: 217.7 79.4% 28.4%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 199.4 93.3% 52.9%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 216 33.3% 92%;
+    --sidebar-ring: 199.4 93.3% 52.9%;
+  }
+
+  .dark {
+    --primary: 195 70% 20%;              /* Dark Teal #0f4656 */
+    --primary-foreground: 0 0% 100%;     /* White #ffffff */
+
+    --secondary: 19 83% 62%;             /* Orange/Coral #ef864c */
+    --secondary-foreground: 0 0% 100%;   /* White #ffffff */
+
+    --accent: 19 83% 62%;                /* Orange/Coral #ef864c */
+    --accent-foreground: 0 0% 100%;      /* White #ffffff */
+
+    --background: 195 70% 20%;           /* Dark Teal #0f4656 */
+    --foreground: 0 0% 100%;             /* White #ffffff */
+
+    --card: 0 0% 0%;                     /* Black #000000 */
+    --card-foreground: 0 0% 100%;        /* White #ffffff */
+
+    --popover: 0 0% 0%;                  /* Black #000000 */
+    --popover-foreground: 0 0% 100%;     /* White #ffffff */
+
+    --muted: 0 0% 78%;                   /* Light Gray #c7c7c7 */
+    --muted-foreground: 0 0% 78%;        /* Light Gray #c7c7c7 */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 78%;                  /* Light Gray #c7c7c7 */
+    --input: 0 0% 78%;                   /* Light Gray #c7c7c7 */
+    --ring: 19 83% 62%;                  /* Orange/Coral #ef864c */
+
+    --sidebar-background: 213.8 44.4% 11.2%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199.4 93.3% 52.9%;
+    --sidebar-primary-foreground: 213.8 44.4% 11.2%;
+    --sidebar-accent: 17.9 99.2% 55.1%;
+    --sidebar-accent-foreground: 213.8 44.4% 11.2%;
+    --sidebar-border: 213.8 44.4% 20%;
+    --sidebar-ring: 199.4 93.3% 52.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
